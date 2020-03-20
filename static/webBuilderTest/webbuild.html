@@ -1,0 +1,65 @@
+<style>
+    * {
+        box-sizing: border-box;
+        outline-width: 1px;
+        outline-color: chocolate;
+        outline-style: dotted;
+    }
+
+    .wrapper,
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+
+    .wrapper {
+        display: flex;
+
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    .column {
+        float: left;
+        padding: 10px;
+        /* Should be removed. Only for demonstration */
+    }
+
+    .left {
+        width: 20%;
+    }
+
+    .right {
+        width: 80%;
+
+    }
+
+    .outline {
+        border: solid blue;
+    }
+
+    .outlineRoot {
+        outline: solid red;
+    }
+
+    .selected {
+        border: solid 2px purple;
+    }
+</style>
+
+<script src="webbuild.js"></script>
+<script src="elements/defaultOptions.js"></script>
+
+<div class="titleBar"></div>
+<div class="wrapper row">
+    <div class="column left" style="background-color:#aaa;">
+        <ol id="ElementSelectList" style="border-bottom: black double;">
+        </ol>
+        <br>
+        <div id="optionsBox">
+        </div>
+
+    </div>
+    <div id="buildArea" class="column right" ondrop="onDrop(event)" ondragover="allowDrop(event)"
+        onmouseover="outline(event)" onmouseout="removeOutline(event)" onclick="selectElementClick(event)"></div>
+</div>

@@ -1,0 +1,12 @@
+CamelCase everything
+
+Any attribute and syle-classes used by only this application should be in the format aeaBuilder_
+
+Need to have a list of elements that can be easily added to the webbuild.js File
+Each element should have the following scheme
+/name
+--name.html
+--name.css
+--nameOption.html
+--nameOption.js //Maybe change this, need to figure out the JS side of editing
+

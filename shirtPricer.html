@@ -1,0 +1,126 @@
+<script>
+
+</script>
+<style>
+    .outsideBox {
+        background-color: rgba(69, 90, 107, 1);
+    }
+
+    .internalBox {
+        background-color: rgba(93, 116, 132, 1);
+    }
+
+    .titleBox {
+        color: white;
+    }
+
+    .sliderTitleStyle {
+        color: white;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        /* Override default CSS styles */
+        appearance: none;
+        width: 100%;
+        /* Full-width */
+        height: 25px;
+        /* Specified height */
+        background: #d3d3d3;
+        /* Grey background */
+        outline: none;
+        /* Remove outline */
+        opacity: 0.7;
+        /* Set transparency (for mouse-over effects on hover) */
+        -webkit-transition: .2s;
+        /* 0.2 seconds transition on hover */
+        transition: opacity .2s;
+    }
+
+    /* Mouse-over effects */
+    .slider:hover {
+        opacity: 1;
+        /* Fully shown on mouse-over */
+    }
+
+    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        /* Override default look */
+        appearance: none;
+        width: 25px;
+        /* Set a specific slider handle width */
+        height: 25px;
+        /* Slider handle height */
+        background: #4CAF50;
+        /* Green background */
+        cursor: pointer;
+        /* Cursor on hover */
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        /* Set a specific slider handle width */
+        height: 25px;
+        /* Slider handle height */
+        background: #4CAF50;
+        /* Green background */
+        cursor: pointer;
+        /* Cursor on hover */
+    }
+
+    .range-labels {
+        margin: 18px -41px 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .liRange {
+        position: relative;
+        float: left;
+        width: 90.25px;
+        text-align: center;
+        color: #b2b2b2;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .liRange::before {
+        position: absolute;
+        top: -25px;
+        right: 0;
+        left: 0;
+        content: "";
+        margin: 0 auto;
+        width: 9px;
+        height: 9px;
+        background: #b2b2b2;
+        border-radius: 50%;
+    }
+</style>
+<div class="outsideBox">
+    <div class="titleBox">
+        T-SHIRT PRICING
+    </div>
+    <div id="internalArea" class="internalBox">
+        <label for="colorFront" class="sliderTitleStyle">Number of Colors Front</label><br>
+        <input type="range" value=0 min=0 max=4 class="slider" id="colorFront" list="number"><br>
+        <datalist id="number">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </datalist><br>
+
+        <label for="colorFront" class="sliderTitleStyle">Number of Colors Back</label><br>
+        <input type="range" min=0 max=4 class="slider" id="colorBack" step="1"><br>
+
+        <label for="colorFront" class="sliderTitleStyle">Quantity of Shirts</label><br>
+        <input type="number" min=20 max=200 class="slider" id="quantity" step="1"><br>
+    </div>
+    <div class="price">
+        <span>PRICE</span>
+    </div>
+</div>
